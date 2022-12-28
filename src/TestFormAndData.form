@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="TestFormAndData">
-  <grid id="27dc6" binding="testPanel" layout-manager="GridLayoutManager" row-count="9" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="testPanel" custom-create="true" layout-manager="GridLayoutManager" row-count="9" column-count="6" same-size-horizontally="true" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="20" left="10" bottom="10" right="10"/>
     <constraints>
       <xy x="20" y="20" width="626" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-526606"/>
+      <foreground color="-526606"/>
+    </properties>
     <border type="none"/>
     <children>
-      <component id="9d00e" class="javax.swing.JLabel" binding="judulBuku">
+      <component id="9d00e" class="javax.swing.JLabel" binding="judulBuku" custom-create="true">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-16777216"/>
+          <foreground color="-16777216"/>
           <text value="Judul Buku"/>
         </properties>
       </component>
@@ -21,11 +26,12 @@
           <grid row="7" column="0" row-span="2" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
-      <component id="138a6" class="javax.swing.JLabel" binding="pengarang">
+      <component id="138a6" class="javax.swing.JLabel" binding="pengarang" custom-create="true">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <foreground color="-16777216"/>
           <text value="Pengarang"/>
         </properties>
       </component>
@@ -35,7 +41,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-2696228"/>
+        </properties>
       </component>
       <component id="25a6" class="javax.swing.JTextField" binding="inputJudul">
         <constraints>
@@ -43,7 +51,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-2696228"/>
+        </properties>
       </component>
       <hspacer id="671ac">
         <constraints>
@@ -55,6 +65,7 @@
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <foreground color="-16777216"/>
           <text value="Penerbit"/>
         </properties>
       </component>
@@ -63,6 +74,7 @@
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <foreground color="-16777216"/>
           <text value="Tahun Terbit"/>
         </properties>
       </component>
@@ -71,6 +83,7 @@
           <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <foreground color="-16777216"/>
           <text value="Nomor Rak"/>
         </properties>
       </component>
@@ -80,7 +93,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-2696228"/>
+        </properties>
       </component>
       <component id="33483" class="javax.swing.JTextField" binding="inputTahun">
         <constraints>
@@ -88,7 +103,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-2696228"/>
+        </properties>
       </component>
       <component id="9f2bf" class="javax.swing.JTextField" binding="inputRak">
         <constraints>
@@ -96,23 +113,17 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-2696228"/>
+        </properties>
       </component>
       <component id="43366" class="javax.swing.JLabel">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <foreground color="-16777216"/>
           <text value="Silahkan masukan data buku"/>
-        </properties>
-      </component>
-      <component id="5be52" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Franklin Gothic Heavy" size="20" style="1"/>
-          <text value="Perpustakaan blabla"/>
         </properties>
       </component>
       <component id="19075" class="javax.swing.JButton" binding="inputButton">
@@ -120,7 +131,20 @@
           <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-11836025"/>
+          <foreground color="-526606"/>
+          <hideActionText value="true"/>
           <text value="Input Data"/>
+        </properties>
+      </component>
+      <component id="5be52" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Franklin Gothic Heavy" size="20" style="1"/>
+          <foreground color="-16777216"/>
+          <text value="Perpustakaan blabla"/>
         </properties>
       </component>
     </children>
