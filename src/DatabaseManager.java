@@ -20,7 +20,26 @@ public class DatabaseManager {
         }
     }
 
-    public void exportData() {
+    public int exportData(String judul, String pengarang, String penerbit, String tahun, String rak) {
+        try {
+            preparedStatement = connection.prepareStatement("INSERT INTO databuku (`Judul Buku`,`Pengarang Buku`,`Penerbit Buku`,`Tahun Terbit`,`Nomor Rak`) VALUES (?,?,?,?,?)");
+            preparedStatement.setString(1, judul);
+            preparedStatement.setString(2, pengarang);
+            preparedStatement.setString(3, penerbit);
+            preparedStatement.setString(4, tahun);
+            preparedStatement.setString(5, rak);
+            int execute = preparedStatement.executeUpdate();
+            if(execute == 1) {
+                System.out.println("Upload sukses");
+            }
+            else {
+                System.out.println("Upload gagal");
+            }
 
+        } catch (SQLException e) {
+            System.out.println("Upload gagal");
+            e.printStackTrace();
+        }
+        return 0;
     }
 }
