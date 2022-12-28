@@ -1,6 +1,8 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class TestFormAndData {
+public class TestFormAndData extends JFrame {
     private JPanel testPanel;
     private JTextField inputJudul;
     private JLabel judulBuku;
@@ -29,6 +31,25 @@ public class TestFormAndData {
     }
     public String getRakText() {
         return inputRak.getText();
+    }
+
+    public void displayMainScreen(TestFormAndData screen) {
+        screen.setContentPane(screen.testPanel);
+        screen.setTitle("Testing");
+        screen.setSize(400, 400);
+        screen.setVisible(true);
+        screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        databaseManager.connect();
+    }
+
+    public void uploadBuku() {
+        inputButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Tombol dipencet");
+                databaseManager.exportData(getJudulText(), getPengarangText(), getPenerbitText(), getTahunText(), getRakText());
+            }
+        });
     }
 
 }
