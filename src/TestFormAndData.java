@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//change color
 public class TestFormAndData extends JFrame {
     private JPanel testPanel;
     private JTextField inputJudul;
