@@ -6,6 +6,7 @@ public class Main_Screen extends JFrame {
     private JButton inputBukuButton;
     private JPanel mainPanel;
     private JButton cariBukuButton;
+    private cari_buku cariBuku = new cari_buku();
     Input_buku input_Screen = new Input_buku();
 
     public void displayMainScreen(Main_Screen screen) {
@@ -21,8 +22,11 @@ public class Main_Screen extends JFrame {
         inputBukuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                screen.getContentPane().removeAll();
+                screen.setContentPane(cariBuku.getCari_Buku());
+                //screen.getContentPane().add(new JPanel());
 //                screen.setContentPane(input_Screen.form_input);
-                JOptionPane.showMessageDialog(inputBukuButton, "Halo");
+                //JOptionPane.showMessageDialog(inputBukuButton, "Halo");
             }
         });
     }
