@@ -15,4 +15,8 @@ public class TestFormAndData {
     private void createUIComponents() {
         // TODO: place custom component creation code here
     }
+    public String getJudulText() {
+        return inputJudul.getText();
+    }
+
 }

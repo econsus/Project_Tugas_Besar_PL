@@ -1,4 +1,5 @@
 import java.sql.*;
+import javax.swing.*;
 public class DatabaseManager {
     private Connection connection;
     private PreparedStatement preparedStatement;
