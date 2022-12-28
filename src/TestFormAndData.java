@@ -18,5 +18,17 @@ public class TestFormAndData {
     public String getJudulText() {
         return inputJudul.getText();
     }
+    public String getPengarangText() {
+        return inputPengarang.getText();
+    }
+    public String getPenerbitText() {
+        return inputPenerbit.getText();
+    }
+    public String getTahunText() {
+        return inputTahun.getText();
+    }
+    public String getRakText() {
+        return inputRak.getText();
+    }
 
 }
