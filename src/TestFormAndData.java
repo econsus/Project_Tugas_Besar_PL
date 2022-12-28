@@ -13,6 +13,7 @@ public class TestFormAndData extends JFrame {
     private JTextField inputPenerbit;
     private JTextField inputTahun;
     private JTextField inputRak;
+    private JButton kembaliButton;
     private DatabaseManager databaseManager = new DatabaseManager();
 
     private void createUIComponents() {
