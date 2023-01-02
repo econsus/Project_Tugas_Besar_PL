@@ -7,5 +7,7 @@ public class Driver {
 //        testScreen.uploadBuku();
 //        testScreen.displayMainScreen(testScreen);
         nyoba coba = new nyoba();
+        coba.display(coba);
+        coba.tombol1();
     }
 }
