@@ -10,6 +10,8 @@ public class delete_buku extends JFrame{
     private DatabaseManager databaseManager = new DatabaseManager();
 
     public void display(delete_buku screen) {
+        deleteButton();
+        tombolKembali();
         screen.setContentPane(screen.deletePanel);
         screen.setTitle("Testing");
         screen.setSize(400, 400);
@@ -24,6 +26,16 @@ public class delete_buku extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 String judulBuku = textField1.getText();
                 databaseManager.hapusData(judulBuku);
+            }
+        });
+    }
+    public void tombolKembali(){
+        kembaliButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main_Screen mainScreen = new Main_Screen();
+                dispose();
+                mainScreen.displayMainScreen(mainScreen);
             }
         });
     }
