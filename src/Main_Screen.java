@@ -12,7 +12,7 @@ public class Main_Screen extends JFrame {
     DatabaseManager databaseManager = new DatabaseManager();
     //private TestFormAndData inputPanel = new TestFormAndData();
 
-    private Input_buku input_buku = new Input_buku();
+    private Input_Data input_data = new Input_Data();
 
     public void displayMainScreen(Main_Screen screen) {
         //Main_Screen screen = new Main_Screen();
@@ -29,7 +29,7 @@ public class Main_Screen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                input_buku.displayInput(input_buku);
+                input_data.displayInput(input_data);
             }
         });
     }
