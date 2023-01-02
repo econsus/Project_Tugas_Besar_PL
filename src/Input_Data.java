@@ -18,13 +18,21 @@ public class Input_Data extends JFrame{
         inputButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String judul, pengarang, penerbit, tahun, rak;
-                judul = fieldJudul.getText();
-                pengarang = fieldPengarang.getText();
-                penerbit = fieldPenerbit.getText();
-                tahun = fieldTahun.getText();
-                rak = fieldRak.getText();
-                databaseManager.exportData(judul, pengarang, penerbit, tahun, rak);
+                try {
+                    if(fieldJudul.getText().isEmpty()||fieldPenerbit.getText().isEmpty()||fieldPengarang.getText().isEmpty()||fieldTahun.getText().isEmpty()||fieldRak.getText().isEmpty()){
+                        throw new Exception();
+                    }
+                    String judul, pengarang, penerbit, tahun, rak;
+                    judul = fieldJudul.getText();
+                    pengarang = fieldPengarang.getText();
+                    penerbit = fieldPenerbit.getText();
+                    tahun = fieldTahun.getText();
+                    rak = fieldRak.getText();
+                    databaseManager.exportData(judul, pengarang, penerbit, tahun, rak);
+                }catch (Exception ex){
+                    JOptionPane.showMessageDialog(null,"Mohon isi seluruh data");
+                }
+
             }
         });
     }
