@@ -7,6 +7,7 @@ public class nyoba extends JFrame{
     private JButton button1;
     private JTable table1;
     private JPanel panelA;
+    private DatabaseManager databaseManager = new DatabaseManager();
 
     public void display(nyoba screen) {
         screen.setContentPane(screen.panelA);
