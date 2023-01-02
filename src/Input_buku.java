@@ -1,4 +1,8 @@
+import com.sun.tools.javac.Main;
+
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Input_buku extends JFrame{
     private JTextField textField1;
@@ -10,11 +14,16 @@ public class Input_buku extends JFrame{
     protected JPanel form_input;
     private JButton kembaliButton;
 
-    public void displayInput(Input_buku screen) {
-        screen.setContentPane(screen.form_input);
-        screen.setTitle("Testing");
-        screen.setSize(400, 400);
-        screen.setVisible(true);
-        screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+    public void tombolKembali(){
+        kembaliButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main_Screen mainScreen = new Main_Screen();
+                dispose();
+                mainScreen.displayMainScreen(mainScreen);
+            }
+        });
     }
 }
