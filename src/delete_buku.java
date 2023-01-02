@@ -1,11 +1,10 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class delete_buku extends JFrame{
     private JTextField textField1;
-    private JButton cariButton;
+    private JButton kembaliButton;
     private JButton deleteButton;
     private JPanel deletePanel;
     private DatabaseManager databaseManager = new DatabaseManager();

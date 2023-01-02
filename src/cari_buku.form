@@ -19,7 +19,7 @@
           <background color="-16777216"/>
           <font name="Microsoft Sans Serif"/>
           <foreground color="-16777216"/>
-          <text value="Judul Buku"/>
+          <text value="Cari Buku"/>
         </properties>
       </component>
       <vspacer id="3c783">
