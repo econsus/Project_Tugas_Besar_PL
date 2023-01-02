@@ -19,7 +19,7 @@
           <text value="Perpustakaan Online"/>
         </properties>
       </component>
-      <component id="a028e" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="a028e" class="javax.swing.JTextField" binding="fieldJudul">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -27,7 +27,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="e7304" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="e7304" class="javax.swing.JTextField" binding="fieldTahun">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -37,7 +37,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="ae7ec" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+      <component id="ae7ec" class="javax.swing.JTextField" binding="fieldPenerbit">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -45,7 +45,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="63773" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+      <component id="63773" class="javax.swing.JTextField" binding="fieldPengarang">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -90,7 +90,7 @@
           <text value="Tahun Terbit"/>
         </properties>
       </component>
-      <component id="66351" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+      <component id="66351" class="javax.swing.JTextField" binding="fieldRak">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
