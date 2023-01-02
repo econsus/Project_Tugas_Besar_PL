@@ -20,8 +20,9 @@ public class Input_Data extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 try {
                     if(fieldJudul.getText().isEmpty()||fieldPenerbit.getText().isEmpty()||fieldPengarang.getText().isEmpty()||fieldTahun.getText().isEmpty()||fieldRak.getText().isEmpty()){
-                        throw new Exception();
+                        throw new Exception("Mohon isi seluruh data");
                     }
+
                     String judul, pengarang, penerbit, tahun, rak;
                     judul = fieldJudul.getText();
                     pengarang = fieldPengarang.getText();
@@ -30,7 +31,7 @@ public class Input_Data extends JFrame{
                     rak = fieldRak.getText();
                     databaseManager.exportData(judul, pengarang, penerbit, tahun, rak);
                 }catch (Exception ex){
-                    JOptionPane.showMessageDialog(null,"Mohon isi seluruh data");
+                    JOptionPane.showMessageDialog(null,ex);
                 }
 
             }
