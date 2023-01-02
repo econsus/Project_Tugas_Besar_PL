@@ -6,6 +6,7 @@ public class cari_buku extends JFrame{
     private JPanel cari_Buku;
     private JButton button;
     private JButton kembaliButton;
+    private JTable table1;
     private DatabaseManager databaseManager = new DatabaseManager();
 
     public JPanel getCari_Buku() {
