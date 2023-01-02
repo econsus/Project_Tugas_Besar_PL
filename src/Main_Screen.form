@@ -23,34 +23,34 @@
         </constraints>
         <properties>
           <font size="12" style="1"/>
-          <text value="Input Book"/>
+          <text value="Input Buku"/>
         </properties>
       </component>
-      <component id="7dc1e" class="javax.swing.JButton" binding="cariBookButton" default-binding="true">
+      <component id="7dc1e" class="javax.swing.JButton" binding="cariBukuButton" default-binding="true">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font size="12" style="1"/>
-          <text value="Cari Book"/>
+          <text value="Cari Buku"/>
         </properties>
       </component>
-      <component id="2c98f" class="javax.swing.JButton" binding="deleteBookButton" default-binding="true">
+      <component id="2c98f" class="javax.swing.JButton" binding="deleteBukuButton" default-binding="true">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font size="12" style="1"/>
-          <text value="Delete Book"/>
+          <text value="Delete Buku"/>
         </properties>
       </component>
-      <component id="9edb" class="javax.swing.JButton" binding="updateBookButton" default-binding="true">
+      <component id="9edb" class="javax.swing.JButton" binding="updateBukuButton" default-binding="true">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font size="12" style="1"/>
-          <text value="Update Book"/>
+          <text value="Update Buku"/>
         </properties>
       </component>
     </children>

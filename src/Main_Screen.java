@@ -2,10 +2,10 @@ import javax.swing.*;
 
 public class Main_Screen extends JFrame {
     private JPanel mainPanel;
-    private JButton cariBookButton;
+    private JButton cariBukuButton;
     private JButton inputBukuButton;
-    private JButton deleteBookButton;
-    private JButton updateBookButton;
+    private JButton deleteBukuButton;
+    private JButton updateBukuButton;
     private cari_buku cariBuku = new cari_buku();
     DatabaseManager databaseManager = new DatabaseManager();
     //private TestFormAndData inputPanel = new TestFormAndData();
