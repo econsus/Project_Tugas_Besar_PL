@@ -14,7 +14,7 @@ public class TestFormAndData extends JFrame {
     private JTextField inputTahun;
     private JTextField inputRak;
     private JButton kembaliButton;
-    private DatabaseManager databaseManager = new DatabaseManager();
+   private DatabaseManager databaseManager = new DatabaseManager();
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
