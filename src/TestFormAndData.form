@@ -129,7 +129,7 @@
         <properties>
           <font name="Microsoft Sans Serif" size="14" style="0"/>
           <foreground color="-16777216"/>
-          <text value="Silahkan masukan data buku"/>
+          <text value="Masukkan Data Buku"/>
         </properties>
       </component>
       <component id="5be52" class="javax.swing.JLabel">
@@ -139,19 +139,7 @@
         <properties>
           <font name="Microsoft Tai Le" size="20" style="1"/>
           <foreground color="-16777216"/>
-          <text value="Perpustakaan blabla"/>
-        </properties>
-      </component>
-      <component id="65de" class="javax.swing.JButton" binding="kembaliButton" default-binding="true">
-        <constraints>
-          <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-526606"/>
-          <font name="Microsoft Sans Serif" style="1"/>
-          <foreground color="-526606"/>
-          <hideActionText value="true"/>
-          <text value="Kembali"/>
+          <text value="Perpustakaan Managemen"/>
         </properties>
       </component>
       <component id="19075" class="javax.swing.JButton" binding="inputButton">
@@ -163,7 +151,7 @@
           <font name="Microsoft Sans Serif" style="1"/>
           <foreground color="-526606"/>
           <hideActionText value="true"/>
-          <text value="Input Data"/>
+          <text value="Input"/>
         </properties>
       </component>
     </children>

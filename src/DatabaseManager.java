@@ -1,13 +1,12 @@
 import java.sql.*;
 import javax.swing.*;
 public class DatabaseManager {
-    private Connection connection;
     private PreparedStatement preparedStatement;
+    private Connection connection;
+
 
     /**
      * berfungsi untuk melakukan koneksi ke server database
-     * @exception ClassNotFoundException terjadi jika driver class untuk JDBC tidak ditemukan
-     * @exception SQLException terjadi saat terjadi error pada query database
      */
     public void connect() {
         try {
@@ -20,7 +19,7 @@ public class DatabaseManager {
         }
     }
 
-    public int exportData(String judul, String pengarang, String penerbit, String tahun, String rak) {
+    public void exportData(String judul, String pengarang, String penerbit, String tahun, String rak) {
         try {
             preparedStatement = connection.prepareStatement("INSERT INTO databuku (`Judul Buku`,`Pengarang Buku`,`Penerbit Buku`,`Tahun Terbit`,`Nomor Rak`) VALUES (?,?,?,?,?)");
             preparedStatement.setString(1, judul);
@@ -40,7 +39,6 @@ public class DatabaseManager {
             System.out.println("Upload gagal");
             e.printStackTrace();
         }
-        return 0;
     }
 
     public void updateData (String judul, String pengarang, String penerbit,String tahun , String rak, String target) {

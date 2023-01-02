@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class cari_buku {
+public class cari_buku extends JFrame{
     private JTextField textField1;
     private JPanel cari_Buku;
     private JButton button;

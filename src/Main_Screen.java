@@ -7,7 +7,8 @@ public class Main_Screen extends JFrame {
     private JPanel mainPanel;
     private JButton cariBukuButton;
     private cari_buku cariBuku = new cari_buku();
-    Input_buku input_Screen = new Input_buku();
+    DatabaseManager databaseManager = new DatabaseManager();
+    //private TestFormAndData inputPanel = new TestFormAndData();
 
     public void displayMainScreen(Main_Screen screen) {
         //Main_Screen screen = new Main_Screen();
@@ -18,18 +19,28 @@ public class Main_Screen extends JFrame {
         screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public void changeToCariBukuScreen(Main_Screen screen) {
-        inputBukuButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                screen.getContentPane().removeAll();
-                screen.setContentPane(cariBuku.getCari_Buku());
-                //screen.getContentPane().add(new JPanel());
-//                screen.setContentPane(input_Screen.form_input);
-                //JOptionPane.showMessageDialog(inputBukuButton, "Halo");
-            }
-        });
-    }
+//    public void tombolInput() {
+//        inputBukuButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                dispose();
+//                inputPanel.displayMainScreen(inputPanel);
+//            }
+//        });
+//    }
+
+//    public void changeToCariBukuScreen(Main_Screen screen) {
+//        inputBukuButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                screen.getContentPane().removeAll();
+//                screen.setContentPane(cariBuku.getCari_Buku());
+//                //screen.getContentPane().add(new JPanel());
+////                screen.setContentPane(input_Screen.form_input);
+//                //JOptionPane.showMessageDialog(inputBukuButton, "Halo");
+//            }
+//        });
+//    }
 
 
 }
