@@ -1,9 +1,35 @@
 import java.sql.*;
 import javax.swing.*;
 public class DatabaseManager {
-    public PreparedStatement preparedStatement;
-    public Connection connection;
-    public ResultSet resultSet;
+    private PreparedStatement preparedStatement;
+    private Connection connection;
+    private ResultSet resultSet;
+
+    public PreparedStatement getPreparedStatement() {
+        return preparedStatement;
+    }
+
+    public void setPreparedStatement(PreparedStatement preparedStatement) {
+        this.preparedStatement = preparedStatement;
+    }
+
+    public Connection getConnection() {
+        return connection;
+    }
+
+    public void setConnection(Connection connection) {
+        this.connection = connection;
+    }
+
+    public ResultSet getResultSet() {
+        return resultSet;
+    }
+
+    public void setResultSet(ResultSet resultSet) {
+        this.resultSet = resultSet;
+    }
+
+
 
 
     /**

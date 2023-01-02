@@ -1,5 +1,6 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSetMetaData;
@@ -7,7 +8,7 @@ import java.sql.SQLException;
 import java.util.Vector;
 
 public class cari_buku extends JFrame{
-    private JTextField textField1;
+    private JTextField fieldCari;
     private JPanel cari_Buku;
     private JButton button;
     private JButton kembaliButton;
@@ -24,7 +25,7 @@ public class cari_buku extends JFrame{
 
     public void display(cari_buku screen) {
         screen.setContentPane(cari_Buku);
-        screen.setSize(400, 400);
+        screen.setSize(800, 400);
         screen.setVisible(true);
         screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         databaseManager.connect();
@@ -34,29 +35,32 @@ public class cari_buku extends JFrame{
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                fetchData(textField1.getText());
+                fetchData(fieldCari.getText());
             }
         });
     }
 
+
     public void fetchData(String judulBuku) {
         try {
             int columntCount;
-            databaseManager.preparedStatement = databaseManager.connection.prepareStatement("SELECT * FROM databuku WHERE `Judul Buku` = ?");
-            databaseManager.preparedStatement.setString(1, judulBuku);
-            databaseManager.resultSet = databaseManager.preparedStatement.executeQuery();
-            ResultSetMetaData metaData = databaseManager.resultSet.getMetaData();
+            Object[] columnTitle = {"Judul Buku", "Pengarang Buku", "Penerbit Buku", "Tahun Terbit", "Nomor Rak"};
+            databaseManager.setPreparedStatement(databaseManager.getConnection().prepareStatement("SELECT * FROM databuku WHERE `Judul Buku` = ?"));
+            databaseManager.getPreparedStatement().setString(1, judulBuku);
+            databaseManager.setResultSet(databaseManager.getPreparedStatement().executeQuery());
+            ResultSetMetaData metaData = databaseManager.getResultSet().getMetaData();
             columntCount = metaData.getColumnCount();
-            DefaultTableModel model = (DefaultTableModel)tabelBuku.getModel();
+            DefaultTableModel model = new DefaultTableModel(null, columnTitle);
+            tabelBuku.setModel(model);
             model.setRowCount(0);
-            while(databaseManager.resultSet.next()) {
+            while(databaseManager.getResultSet().next()) {
                 Vector vector2 = new Vector();
                 for (int i = 1; i <= columntCount; i++) {
-                    vector2.add(databaseManager.resultSet.getString("Judul Buku"));
-                    vector2.add(databaseManager.resultSet.getString("Pengarang Buku"));
-                    vector2.add(databaseManager.resultSet.getString("Penerbit Buku"));
-                    vector2.add(databaseManager.resultSet.getString("Tahun Terbit"));
-                    vector2.add(databaseManager.resultSet.getString("Nomor Rak"));
+                    vector2.add(databaseManager.getResultSet().getString("Judul Buku"));
+                    vector2.add(databaseManager.getResultSet().getString("Pengarang Buku"));
+                    vector2.add(databaseManager.getResultSet().getString("Penerbit Buku"));
+                    vector2.add(databaseManager.getResultSet().getString("Tahun Terbit"));
+                    vector2.add(databaseManager.getResultSet().getString("Nomor Rak"));
                 }
                 model.addRow(vector2);
             }
