@@ -10,6 +10,7 @@ public class Input_Data extends JFrame{
     private JTextField fieldRak;
     private JButton inputButton;
     private JPanel Input_Data;
+    private JButton kembaliButton;
 
     private DatabaseManager databaseManager = new DatabaseManager();
 
