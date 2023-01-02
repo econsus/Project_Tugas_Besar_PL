@@ -24,6 +24,7 @@ public class cari_buku extends JFrame{
     }
 
     public void display(cari_buku screen) {
+        tombolKembali();
         screen.setContentPane(cari_Buku);
         screen.setSize(800, 400);
         screen.setVisible(true);
@@ -36,6 +37,16 @@ public class cari_buku extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 fetchData(fieldCari.getText());
+            }
+        });
+    }
+    public void tombolKembali(){
+        kembaliButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main_Screen mainScreen = new Main_Screen();
+                dispose();
+                mainScreen.displayMainScreen(mainScreen);
             }
         });
     }
