@@ -25,6 +25,7 @@ public class Main_Screen extends JFrame {
     }
 
     public void tombolInput() {
+        input_data.input_Button();
         inputBukuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -14,15 +14,6 @@ public class Input_Data extends JFrame{
 
     private DatabaseManager databaseManager = new DatabaseManager();
 
-    public void display (Input_Data screen) {
-        screen.setContentPane(screen.Input_Data);
-        screen.setTitle("Testing");
-        screen.setSize(400, 400);
-        screen.setVisible(true);
-        screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        databaseManager.connect();
-    }
-
     public void input_Button() {
         inputButton.addActionListener(new ActionListener() {
             @Override
@@ -55,5 +46,6 @@ public class Input_Data extends JFrame{
         screen.setSize(400, 400);
         screen.setVisible(true);
         screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        databaseManager.connect();
     }
 }
