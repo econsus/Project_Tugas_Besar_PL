@@ -63,6 +63,7 @@ public class Main_Screen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
+                cariBuku.searchButton();
                 cariBuku.display(cariBuku);
             }
         });
