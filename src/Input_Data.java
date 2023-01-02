@@ -37,4 +37,23 @@ public class Input_Data extends JFrame{
             }
         });
     }
+
+    public void tombolKembali(){
+        kembaliButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main_Screen mainScreen = new Main_Screen();
+                dispose();
+                mainScreen.displayMainScreen(mainScreen);
+            }
+        });
+    }
+    public void displayInput(Input_Data screen) {
+        tombolKembali();
+        screen.setContentPane(screen.Input_Data);
+        screen.setTitle("Testing");
+        screen.setSize(400, 400);
+        screen.setVisible(true);
+        screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
 }

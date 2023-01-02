@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Main_Screen extends JFrame {
     private JPanel mainPanel;
@@ -10,8 +12,11 @@ public class Main_Screen extends JFrame {
     DatabaseManager databaseManager = new DatabaseManager();
     //private TestFormAndData inputPanel = new TestFormAndData();
 
+    private Input_Data input_data = new Input_Data();
+
     public void displayMainScreen(Main_Screen screen) {
         //Main_Screen screen = new Main_Screen();
+        tombolInput();
         screen.setContentPane(screen.mainPanel);
         screen.setTitle("Testing");
         screen.setSize(400, 400);
@@ -19,15 +24,15 @@ public class Main_Screen extends JFrame {
         screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-//    public void tombolInput() {
-//        inputBukuButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                dispose();
-//                inputPanel.displayMainScreen(inputPanel);
-//            }
-//        });
-//    }
+    public void tombolInput() {
+        inputBukuButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                input_data.displayInput(input_data);
+            }
+        });
+    }
 
 //    public void changeToCariBukuScreen(Main_Screen screen) {
 //        inputBukuButton.addActionListener(new ActionListener() {
