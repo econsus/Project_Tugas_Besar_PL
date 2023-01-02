@@ -13,9 +13,11 @@ public class Main_Screen extends JFrame {
     //private TestFormAndData inputPanel = new TestFormAndData();
 
     private Input_Data input_data = new Input_Data();
+    private Update_Data update_data = new Update_Data();
 
     public void displayMainScreen(Main_Screen screen) {
         //Main_Screen screen = new Main_Screen();
+        tombolUpdate();
         tombolInput();
         screen.setContentPane(screen.mainPanel);
         screen.setTitle("Testing");
@@ -34,6 +36,16 @@ public class Main_Screen extends JFrame {
             }
         });
     }
+    public void tombolUpdate() {
+        updateBukuButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                update_data.displayUpdate(update_data);
+            }
+        });
+    }
+
 
 //    public void changeToCariBukuScreen(Main_Screen screen) {
 //        inputBukuButton.addActionListener(new ActionListener() {
