@@ -29,16 +29,13 @@ public class DatabaseManager {
         this.resultSet = resultSet;
     }
 
-
-
-
     /**
      * berfungsi untuk melakukan koneksi ke server database
      */
     public void connect() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/tugasbesarpl","root","Imisthebest9");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/databuku","root","KrakenAura1.");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -106,20 +103,4 @@ public class DatabaseManager {
             e.printStackTrace();
         }
     }
-
-//    public void selectData(String judulBuku) {
-//        try {
-//            preparedStatement = connection.prepareStatement("SELECT * FROM databuku WHERE `Judul Buku` = ?");
-//            preparedStatement.setString(1, judulBuku);
-//            int execute = preparedStatement.executeUpdate();
-//            if (execute == 1) {
-//                System.out.println("Data Ditemukan");
-//            }
-//            else {
-//                System.out.println("Buku Yang Anda Cari Tidak Ditemukan");
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }

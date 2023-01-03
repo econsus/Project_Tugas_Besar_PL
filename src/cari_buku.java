@@ -15,9 +15,6 @@ public class cari_buku extends JFrame{
     private JTable tabelBuku;
     private DatabaseManager databaseManager = new DatabaseManager();
 
-    public JPanel getCari_Buku() {
-        return cari_Buku;
-    }
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
