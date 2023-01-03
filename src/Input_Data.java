@@ -20,11 +20,9 @@ public class Input_Data extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 try {
                     if(fieldJudul.getText().isEmpty()||fieldPenerbit.getText().isEmpty()||fieldPengarang.getText().isEmpty()||fieldTahun.getText().isEmpty()||fieldRak.getText().isEmpty()){
-                        int x = Integer.parseInt(fieldTahun.getText());
                         throw new Exception("Mohon isi seluruh data yang valid");
                     }
-
-
+                    int x = Integer.parseInt(fieldTahun.getText());
                     String judul, pengarang, penerbit, tahun, rak;
                     judul = fieldJudul.getText();
                     pengarang = fieldPengarang.getText();
