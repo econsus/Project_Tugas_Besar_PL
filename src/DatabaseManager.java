@@ -1,10 +1,18 @@
 import java.sql.*;
 import javax.swing.*;
+
+/**
+ * Class untuk manajemen database
+ */
 public class DatabaseManager {
     private PreparedStatement preparedStatement;
     private Connection connection;
     private ResultSet resultSet;
 
+    /**
+     * Method Setter Getter untuk class lain mengakses atribut dari database
+     * @return preparedStatement
+     */
     public PreparedStatement getPreparedStatement() {
         return preparedStatement;
     }
@@ -13,6 +21,10 @@ public class DatabaseManager {
         this.preparedStatement = preparedStatement;
     }
 
+    /**
+     * Method Setter dan Getter untuk class lain  mengakses database
+     * @return connection
+     */
     public Connection getConnection() {
         return connection;
     }
@@ -21,6 +33,10 @@ public class DatabaseManager {
         this.connection = connection;
     }
 
+    /**
+     * Method Setter dan Getter untuk class lain mengakses hasil Query database
+     * @return resultSet
+     */
     public ResultSet getResultSet() {
         return resultSet;
     }
@@ -30,7 +46,7 @@ public class DatabaseManager {
     }
 
     /**
-     * berfungsi untuk melakukan koneksi ke server database
+     * berfungsi untuk melakukan koneksi program ke server database
      */
     public void connect() {
         try {
@@ -43,6 +59,14 @@ public class DatabaseManager {
         }
     }
 
+    /**
+     * Method untuk memasukkan data buku kedalam database
+     * @param judul
+     * @param pengarang
+     * @param penerbit
+     * @param tahun
+     * @param rak
+     */
     public void exportData(String judul, String pengarang, String penerbit, String tahun, String rak) {
         try {
             preparedStatement = connection.prepareStatement("INSERT INTO databuku (`Judul Buku`,`Pengarang Buku`,`Penerbit Buku`,`Tahun Terbit`,`Nomor Rak`) VALUES (?,?,?,?,?)");
@@ -65,6 +89,15 @@ public class DatabaseManager {
         }
     }
 
+    /**
+     * Method untuk mengupdate data buku di database berdasarkan pencarian pengguna
+     * @param judul
+     * @param pengarang
+     * @param penerbit
+     * @param tahun
+     * @param rak
+     * @param target
+     */
     public void updateData (String judul, String pengarang, String penerbit,String tahun , String rak, String target) {
         try {
             preparedStatement = connection.prepareStatement("UPDATE databuku SET `Judul Buku` = ?, `Pengarang Buku` = ?, `Penerbit Buku` = ?, `Tahun Terbit` = ?, `Nomor Rak` = ? WHERE `Judul Buku` = ?");
@@ -87,6 +120,10 @@ public class DatabaseManager {
         }
     }
 
+    /**
+     * Method untuk menghapus data buku di database berdasarkan pencarian pengguna
+     * @param target
+     */
     public void hapusData (String target) {
         try {
             preparedStatement = connection.prepareStatement("DELETE FROM databuku where `Judul Buku` = ?");

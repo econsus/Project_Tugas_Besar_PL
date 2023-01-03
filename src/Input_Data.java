@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Class untuk halaman input
+ */
 public class Input_Data extends JFrame{
     private JTextField fieldJudul;
     private JTextField fieldTahun;
@@ -14,6 +17,11 @@ public class Input_Data extends JFrame{
 
     private DatabaseManager databaseManager = new DatabaseManager();
 
+    /**
+     * Method untuk memberikan fungsi pada input button dan memasukkan data buku ke dataabase
+     * @exception Exception ketika pengguna klik button tanpa mengisi keseluruhan data
+     * @exception NumberFormatException ketika pengguna mengisi selain bilangan pada data tahun
+     */
     public void input_Button() {
         inputButton.addActionListener(new ActionListener() {
             @Override
@@ -44,7 +52,9 @@ public class Input_Data extends JFrame{
         });
     }
 
-
+    /**
+     * Memberikan fungsi paca back button
+     */
     public void tombolKembali(){
         kembaliButton.addActionListener(new ActionListener() {
             @Override
@@ -55,10 +65,14 @@ public class Input_Data extends JFrame{
             }
         });
     }
+
+    /**
+     * Menampilkan GUI dari halaman input
+     */
     public void displayInput(Input_Data screen) {
         tombolKembali();
         screen.setContentPane(screen.Input_Data);
-        screen.setTitle("Testing");
+        screen.setTitle("Manajemen Perpustakaan");
         screen.setSize(400, 400);
         screen.setVisible(true);
         screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

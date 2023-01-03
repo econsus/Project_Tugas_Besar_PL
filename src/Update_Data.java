@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Class untuk halaman update
+ */
 public class Update_Data extends JFrame{
     private JPanel Update_Data;
     private JTextField fieldJudul;
@@ -13,15 +16,23 @@ public class Update_Data extends JFrame{
     private JButton kembaliButton;
     private DatabaseManager databaseManager = new DatabaseManager();
 
+    /**
+     * Method untuk menampilkan GUI dari halaman update
+     */
     public void displayUpdate(Update_Data screen) {
         tombolKembali();
         update_Button();
         screen.setContentPane(screen.Update_Data);
+        screen.setTitle("Manajemen Perpustakaan");
         screen.setSize(400, 400);
         screen.setVisible(true);
         screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         databaseManager.connect();
     }
+
+    /**
+     * Method untuk memberikan fungsi back button
+     */
     public void tombolKembali(){
         kembaliButton.addActionListener(new ActionListener() {
             @Override
@@ -32,6 +43,12 @@ public class Update_Data extends JFrame{
             }
         });
     }
+
+    /**
+     * Method untuk memberikan fungsi pada update button dan mengupdate data buku di database
+     * @exception Exception ketika pengguna klik button tanpa mengisi keseluruhan data
+     * @exception NumberFormatException ketika pengguna mengisi selain bilangan pada data tahun
+     */
     public void update_Button(){
         updateButton.addActionListener(new ActionListener() {
             @Override

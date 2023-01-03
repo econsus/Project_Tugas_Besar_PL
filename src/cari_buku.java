@@ -7,6 +7,9 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.Vector;
 
+/**
+ * Class untuk halaman menu cari
+ */
 public class cari_buku extends JFrame{
     private JTextField fieldCari;
     private JPanel cari_Buku;
@@ -15,20 +18,22 @@ public class cari_buku extends JFrame{
     private JTable tabelBuku;
     private DatabaseManager databaseManager = new DatabaseManager();
 
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
-
+    /**
+     *Method untuk menampilkan GUI dari halaman cari
+     */
     public void display(cari_buku screen) {
         tombolKembali();
         screen.setContentPane(cari_Buku);
+        screen.setTitle("Manajemen Perpustakaan");
         screen.setSize(800, 400);
         screen.setVisible(true);
         screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         databaseManager.connect();
     }
 
+    /**
+     * Method untuk memberikan fungsi dari search button
+     */
     public void searchButton() {
         button.addActionListener(new ActionListener() {
             @Override
@@ -37,6 +42,10 @@ public class cari_buku extends JFrame{
             }
         });
     }
+
+    /**
+     * Memberikan fungsi dari back button
+     */
     public void tombolKembali(){
         kembaliButton.addActionListener(new ActionListener() {
             @Override
@@ -48,7 +57,10 @@ public class cari_buku extends JFrame{
         });
     }
 
-
+    /**
+     * Method untuk mencari dan menampilkan data buku yang dicari
+     * @param judulBuku
+     */
     public void fetchData(String judulBuku) {
         try {
             int columntCount;
