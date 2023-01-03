@@ -70,7 +70,7 @@ public class DatabaseManager {
 
     public void updateData (String judul, String pengarang, String penerbit,String tahun , String rak, String target) {
         try {
-            preparedStatement = connection.prepareStatement("UPDATE databuku SET `Judul Buku` = ?, `Pengarang Buku` = ?, `Penerbit Buku` = ?, `Tahun Terbit` = ?, `Nomor Rak` = ?, WHERE `Judul Buku` = ?");
+            preparedStatement = connection.prepareStatement("UPDATE databuku SET `Judul Buku` = ?, `Pengarang Buku` = ?, `Penerbit Buku` = ?, `Tahun Terbit` = ?, `Nomor Rak` = ? WHERE `Judul Buku` = ?");
             preparedStatement.setString(1, judul);
             preparedStatement.setString(2, pengarang);
             preparedStatement.setString(3, penerbit);
@@ -107,19 +107,19 @@ public class DatabaseManager {
         }
     }
 
-    public void selectData(String judulBuku) {
-        try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM databuku WHERE `Judul Buku` = ?");
-            preparedStatement.setString(1, judulBuku);
-            int execute = preparedStatement.executeUpdate();
-            if (execute == 1) {
-                System.out.println("Data Ditemukan");
-            }
-            else {
-                System.out.println("Buku Yang Anda Cari Tidak Ditemukan");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+//    public void selectData(String judulBuku) {
+//        try {
+//            preparedStatement = connection.prepareStatement("SELECT * FROM databuku WHERE `Judul Buku` = ?");
+//            preparedStatement.setString(1, judulBuku);
+//            int execute = preparedStatement.executeUpdate();
+//            if (execute == 1) {
+//                System.out.println("Data Ditemukan");
+//            }
+//            else {
+//                System.out.println("Buku Yang Anda Cari Tidak Ditemukan");
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

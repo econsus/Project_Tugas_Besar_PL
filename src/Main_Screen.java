@@ -17,7 +17,6 @@ public class Main_Screen extends JFrame {
     private delete_buku deleteBuku = new delete_buku();
 
     public void displayMainScreen(Main_Screen screen) {
-        //Main_Screen screen = new Main_Screen();
         tombolUpdate();
         tombolInput();
         tombolDelete();
@@ -31,10 +30,10 @@ public class Main_Screen extends JFrame {
     }
 
     public void tombolInput() {
-        input_data.input_Button();
         inputBukuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                input_data.input_Button();
                 dispose();
                 input_data.displayInput(input_data);
             }
@@ -45,6 +44,7 @@ public class Main_Screen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
+                update_data.update_Button();
                 update_data.displayUpdate(update_data);
             }
         });
@@ -54,6 +54,7 @@ public class Main_Screen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
+                deleteBuku.deleteButton();
                 deleteBuku.display(deleteBuku);
             }
         });
@@ -68,20 +69,4 @@ public class Main_Screen extends JFrame {
             }
         });
     }
-
-
-//    public void changeToCariBukuScreen(Main_Screen screen) {
-//        inputBukuButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                screen.getContentPane().removeAll();
-//                screen.setContentPane(cariBuku.getCari_Buku());
-//                //screen.getContentPane().add(new JPanel());
-////                screen.setContentPane(input_Screen.form_input);
-//                //JOptionPane.showMessageDialog(inputBukuButton, "Halo");
-//            }
-//        });
-//    }
-
-
 }
