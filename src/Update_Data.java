@@ -15,6 +15,7 @@ public class Update_Data extends JFrame{
 
     public void displayUpdate(Update_Data screen) {
         tombolKembali();
+        update_Button();
         screen.setContentPane(screen.Update_Data);
         screen.setSize(400, 400);
         screen.setVisible(true);
@@ -36,10 +37,15 @@ public class Update_Data extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    if(fieldJudul.getText().isEmpty()||fieldPenerbit.getText().isEmpty()||fieldPengarang.getText().isEmpty()||fieldTahun.getText().isEmpty()||fieldRak.getText().isEmpty()){
+                    boolean cekInput =  fieldJudul.getText().isEmpty() ||
+                                        fieldPenerbit.getText().isEmpty() ||
+                                        fieldPengarang.getText().isEmpty() ||
+                                        fieldTahun.getText().isEmpty() ||
+                                        fieldRak.getText().isEmpty();
+                    if(cekInput){
                         throw new Exception("Mohon isi seluruh data yang valid");
                     }
-                    int x = Integer.parseInt(fieldTahun.getText());
+                    int cekTahun = Integer.parseInt(fieldTahun.getText());
                     String judul, pengarang, penerbit, tahun, rak;
                     judul = fieldJudul.getText();
                     pengarang = fieldPengarang.getText();

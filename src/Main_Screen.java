@@ -17,16 +17,20 @@ public class Main_Screen extends JFrame {
     private delete_buku deleteBuku = new delete_buku();
 
     public void displayMainScreen(Main_Screen screen) {
-        tombolUpdate();
-        tombolInput();
-        tombolDelete();
-        tombolCari();
+        fungsiTombol();
 
         screen.setContentPane(screen.mainPanel);
         screen.setTitle("Testing");
         screen.setSize(400, 400);
         screen.setVisible(true);
         screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    private void fungsiTombol() {
+        tombolUpdate();
+        tombolInput();
+        tombolDelete();
+        tombolCari();
     }
 
     public void tombolInput() {
